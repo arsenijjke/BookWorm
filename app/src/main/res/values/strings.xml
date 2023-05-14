@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">APPNAME</string>
+
+    <string name="begin">Begin</string>
+    <string name="name">Name</string>
+    <string name="password">Password</string>
+    <string name="registration">First time here?</string>
+
+    <string name="start_registration">Create new account</string>
+    <string name="begin_travelling">Start travelling as</string>
+
+    <string name="create_account">Create account</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

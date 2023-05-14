@@ -1,0 +1,47 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    id 'com.android.application' version '7.4.2' apply false
+    id 'com.android.library' version '7.4.2' apply false
+    id 'org.jetbrains.kotlin.android' version '1.8.0' apply false
+    id 'org.jetbrains.kotlin.plugin.parcelize' version "1.8.20" apply false
+}
+
+ext {
+    compileSdkVersion = 33
+    minSdkVersion = 24
+    targetSdkVersion = 33
+    buildToolsVersion = "33.0.0"
+
+    dependencies = [:]
+
+    /** View */
+    dependencies.coreKtx = 'androidx.core:core-ktx:1.9.0'
+    dependencies.activityKtx = 'androidx.appcompat:appcompat:1.6.1'
+    dependencies.fragmentKtx = 'com.google.android.material:material:1.8.0'
+    dependencies.material = 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    dependencies.viewBinding = 'com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.5.9'
+
+    /** Navigation */
+    dependencies.navigation = 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    dependencies.navigationUI = 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    dependencies.cicerone = 'com.github.terrakok:cicerone:6.6'
+
+    /* Coroutines */
+    dependencies.coroutines = 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+    dependencies.coroutinesTest = 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4'
+
+    /* Timber */
+    dependencies.timber = 'com.jakewharton.timber:timber:5.0.1'
+
+    /* Lifecycle Scope */
+    dependencies.lifecyclescope = 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
+    dependencies.viewmodelscope = 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+
+    /* DI */
+    dependencies.koinAndroid = "io.insert-koin:koin-android:3.3.0"
+    dependencies.koinTest = "io.insert-koin:koin-test:3.3.0"
+    dependencies.koinAndroidCompat = "io.insert-koin:koin-android-compat:3.3.0"
+    dependencies.koinJava = "org.koin:koin-java:3.3.0"
+
+}

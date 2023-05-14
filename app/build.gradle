@@ -1,0 +1,74 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
+}
+
+android {
+    namespace 'app.arsenijjke.cursach'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "app.arsenijjke.cursach"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures{
+        dataBinding true
+        viewBinding true
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    viewBinding {
+        enabled = true
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    //Android
+    implementation rootProject.ext.dependencies.coreKtx
+    implementation rootProject.ext.dependencies.fragmentKtx
+    implementation rootProject.ext.dependencies.activityKtx
+    implementation rootProject.ext.dependencies.material
+
+    //ViewBinding
+    implementation rootProject.ext.dependencies.viewBinding
+
+    //Koin (DI)
+    implementation rootProject.ext.dependencies.koinAndroid
+    implementation rootProject.ext.dependencies.koinAndroidCompat
+
+    //Navigation (Cicerone)
+    implementation rootProject.ext.dependencies.cicerone
+
+    //Coroutines
+    implementation rootProject.ext.dependencies.coroutines
+
+}
