@@ -28,6 +28,7 @@ class CatalogScreen : Fragment(R.layout.screen_catalog) {
     }
 
     private fun setupRecycler() = with(binding) {
+        toolbar.title.text = "Каталог"
         recycler.layoutManager = GridLayoutManager(requireContext(), 3)
         recycler.addItemDecoration(RecyclerViewMarginDecorator(10))
         recycler.adapter = GeneresAdapter(genresList)

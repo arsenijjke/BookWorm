@@ -10,4 +10,8 @@ class MediaPlayerScreenViewModel(
 ) : ViewModel() {
 
     val bookUI = book
+
+    fun navigateToBack() {
+        coordinator.back()
+    }
 }

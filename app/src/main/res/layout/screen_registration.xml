@@ -3,22 +3,32 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:srcCompat="@drawable/wave"
+        android:rotationX="180"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/createregistration"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:text="@string/start_registration"
+        android:text="Создать новый аккаунт"
         android:textAlignment="center"
         android:textColor="@color/text_primary"
         android:textSize="50sp"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/background_image" />
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/InputLayout"
-        android:hint="@string/name"
+        android:hint="Имя"
         android:id="@+id/login_input"
         android:layout_height="wrap_content"
         android:layout_margin="32dp"
@@ -40,7 +50,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/InputLayout"
-        android:hint="@string/password"
+        android:hint="Пароль"
         android:id="@+id/passwordInput"
         android:layout_height="wrap_content"
         android:layout_margin="32dp"
@@ -69,7 +79,7 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="15dp"
         android:layout_width="match_parent"
-        android:text="@string/create_account"
+        android:text="Создать аккаунт"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
